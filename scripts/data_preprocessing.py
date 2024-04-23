@@ -1,38 +1,27 @@
 import pandas as pd
-import numpy as np
+import os
 
-def load_data(filepath):
-    """Load CSV data into a DataFrame."""
-    return pd.read_csv(filepath)
+# بارگذاری داده‌های CSV
+data = pd.read_csv('data/dataset.csv', skiprows=1)  # اگر سربرگ ندارید
 
-def clean_data(df):
-    """Perform data cleaning tasks like removing missing values and unnecessary columns."""
-    # اینجا کدهای مربوط به پاک‌سازی داده‌ها را اضافه کنید
-    return df
+# تعیین مسیر پوشه ریشه برای ذخیره فایل‌های CSV
+root_save_path = 'data/train/'
 
-# مسیر فایل داده‌های خام
-file_path = 'data/dataset.csv'
+# اطمینان از ایجاد پوشه ریشه اگر پیش‌تر ایجاد نشده است
+if not os.path.exists(root_save_path):
+    os.makedirs(root_save_path)
 
-# بارگذاری و پیش‌پردازش داده‌ها
-data = load_data(file_path)
-data = clean_data(data)
+# گروه‌بندی داده‌ها بر اساس برچسب
+grouped = data.groupby(data.columns[0])
 
-# ذخیره داده‌های پیش‌پردازش شده در یک فایل جدید
-data.to_csv('data/cleaned_data.csv', index=False)
-
-def show_encoded_image(data):
-    # دیکد کردن رشته base64 به بایت‌های تصویر
-    image_data = base64.b64decode(data)
-    image = Image.open(io.BytesIO(image_data))
-    image.show()
-
-# یا اگر مسیر تصویر داخل فایل CSV ذخیره شده است:
-def show_image_from_path(image_path):
-    image = Image.open(image_path)
-    image.show()
-
-# نمایش اولین تصویر
-if 'image_data' in data.columns:
-    show_encoded_image(data['image_data'][0])
-elif 'image_path' in data.columns:
-    show_image_from_path(data['image_path'][0])
+# حلقه برای ذخیره هر گروه در فایل CSV جداگانه
+for label, group in grouped:
+    # تعیین مسیر پوشه برای ذخیره فایل‌های CSV بر اساس برچسب
+    label_save_path = os.path.join(root_save_path, str(label))
+    # اطمینان از ایجاد پوشه برچسب اگر پیش‌تر ایجاد نشده است
+    if not os.path.exists(label_save_path):
+        os.makedirs(label_save_path)
+    
+    # تعیین مسیر فایل CSV بر اساس برچسب و ذخیره آن
+    csv_file_path = os.path.join(label_save_path, f'label_{label}.csv')
+    group.to_csv(csv_file_path, header=False, index=False)
