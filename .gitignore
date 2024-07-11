@@ -1,2 +1,14 @@
 # Ignore all files in the data directory
 data/
+
+# Ignore all files in the output directory
+output/
+
+# Ignore all .pkl files
+*.pkl
+
+# Ignore all .h5 files
+*.h5
+
+# Ignore all .docx files
+*.docx
