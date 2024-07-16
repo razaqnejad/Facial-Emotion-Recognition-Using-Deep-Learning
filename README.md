@@ -3,10 +3,8 @@
 This project focuses on developing a real-time facial emotion detection system using various machine learning algorithms, with a primary focus on Convolutional Neural Networks (CNN). The performance of CNN is compared against other algorithms like Random Forest (RF), Support Vector Machine (SVM), K-Nearest Neighbors (KNN), and VggNet.
 
 ## Authors
-- Fatemeh Reazaqnejad (9822123)
-- Baran Babaei (9931893)
-- Alireza DolatAbadi (9821853)
-
+- Fatemeh Reazaqnejad
+- razaqnejad@gmail.com
 ## Course
 Algorithmic Graph Theory by Dr. Farnaz Shikhi, Computer Engineering - Fall
 
