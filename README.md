@@ -55,7 +55,7 @@ To run the project, follow these steps:
         <div>
             <strong>Angry</strong>
             <br>
-            <img src="../media/Real_Time/angry.png" width="350" style="margin-top: 10px;">
+            <img src="media/Real_Time/angry.png" width="350" style="margin-top: 10px;">
         </div>
         <div style="margin-top: 10px;">
             <strong>Happy</strong>
