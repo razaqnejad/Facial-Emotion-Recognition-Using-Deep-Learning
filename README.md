@@ -60,31 +60,31 @@ To run the project, follow these steps:
         <div style="margin-top: 10px;">
             <strong>Happy</strong>
             <br>
-            <img src="../media/Real_Time/happy.png" width="350" style="margin-top: 10px;">
+            <img src="media/Real_Time/happy.png" width="350" style="margin-top: 10px;">
         </div>
     </div>
     <div style="margin-right: 20px;">
         <div>
             <strong>Surprise</strong>
             <br>
-            <img src="../media/Real_Time/surprise.png" width="350" style="margin-top: 10px;">
+            <img src="media/Real_Time/surprise.png" width="350" style="margin-top: 10px;">
         </div>
         <div style="margin-top: 10px;">
             <strong>Sad</strong>
             <br>
-            <img src="../media/Real_Time/sad.png" width="350" style="margin-top: 10px;">
+            <img src="media/Real_Time/sad.png" width="350" style="margin-top: 10px;">
         </div>
     </div>
     <div style="margin-right: 20px;">
         <div>
             <strong>Fear</strong>
             <br>
-            <img src="../media/Real_Time/fear.png" width="350" style="margin-top: 10px;">
+            <img src="media/Real_Time/fear.png" width="350" style="margin-top: 10px;">
         </div>
         <div style="margin-top: 10px;">
             <strong>Neutral</strong>
             <br>
-            <img src="../media/Real_Time/neutral.png" width="350" style="margin-top: 10px;">
+            <img src="media/Real_Time/neutral.png" width="350" style="margin-top: 10px;">
         </div>
 </div>
 
